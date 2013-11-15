@@ -1,2 +1,2 @@
-autocmd BufNewFile,BufRead *.mi
+autocmd BufNewFile,BufRead *.m,*.mi
   \ set ft=mason
