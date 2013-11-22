@@ -50,6 +50,7 @@ syn match masonCompEnd "</&>"
 " syn region masonCompBlock keepend start="<&|[^>]*>" end="</&>"
 
 syn region masonArgs matchgroup=Delimiter start="<%args>" end="</%args>" contains=@perlTop
+syn region masonSharedVars matchgroup=Delimiter start="<%shared_vars>" end="</%shared_vars>" contains=@perlTop
 
 syn region masonInit matchgroup=Delimiter start="<%init>" end="</%init>" contains=@perlTop
 syn region masonCleanup matchgroup=Delimiter start="<%cleanup>" end="</%cleanup>" contains=@perlTop
@@ -67,7 +68,7 @@ syn region masonFilter matchgroup=Delimiter start="<%filter>" end="</%filter>" c
 syn region masonDoc matchgroup=Delimiter start="<%doc>" end="</%doc>"
 syn region masonText matchgroup=Delimiter start="<%text>" end="</%text>"
 
-syn cluster masonTop contains=masonLine,masonExpr,masonPerl,masonComp,masonArgs,masonInit,masonCleanup,masonOnce,masonShared,masonDef,masonMethod,masonFlags,masonAttr,masonFilter,masonDoc,masonText,masonCompStart,masonCompEnd
+syn cluster masonTop contains=masonLine,masonExpr,masonPerl,masonComp,masonArgs,masonSharedVars,masonInit,masonCleanup,masonOnce,masonShared,masonDef,masonMethod,masonFlags,masonAttr,masonFilter,masonDoc,masonText,masonCompStart,masonCompEnd
 
 " Set up default highlighting. Almost all of this is done in the included
 " syntax files.
