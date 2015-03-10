@@ -1,1 +1,1 @@
-autocmd FileType mason set commentstring=#\ %s
+autocmd FileType mason setlocal commentstring=#\ %s
